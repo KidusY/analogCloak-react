@@ -1,0 +1,86 @@
+body {
+	background-color: #223559;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	overflow: hidden;
+}
+.clock {
+	width: 400px;
+	height: 400px;
+	background-position: center;
+	background-size: cover;
+	margin: 100px auto;
+	position: relative;
+	border-radius: 50%;
+	background: #223559;
+	box-shadow: inset 20px 20px 60px #1d2d4c, inset -20px -20px 60px #273d66;
+}
+.clock .shortHand {
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform-origin: bottom;
+	width: 4px;
+	height: 100px;
+	/*
+  0-12 30-1 60-2 90-3 120-4 150-5 180-6 210-7 240-8 270-9 300-10 330-11
+  */
+	background: black;
+}
+.clock .longHand {
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform-origin: bottom;
+	width: 3px;
+	height: 150px;
+
+	background: rgb(255, 255, 255);
+}
+.clock .secondHand {
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform-origin: bottom;
+	width: 2px;
+	height: 150px;
+
+	background-color: rgb(133, 5, 5);
+}
+
+.number {
+	color: white;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+
+	font-size: 1.5rem;
+}
+.number12 {
+	transform: rotate(0deg);
+}
+.number3 {
+	transform: rotate(90deg);
+}
+
+.number3 span {
+	position: absolute;
+	transform: scale(1) rotate(-90deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+}
+.number6 {
+	transform: rotate(180deg);
+}
+.number6 span {
+	position: absolute;
+	transform: scale(1) rotate(-180deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+}
+.number9 {
+	transform: rotate(270deg);
+}
+.number9 span {
+	position: absolute;
+	transform: scale(1) rotate(-270deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+}
